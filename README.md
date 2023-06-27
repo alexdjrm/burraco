@@ -1,2 +1,2 @@
 # burraco-calculator
-Very
+Very simple implementation of a burraco calculator
