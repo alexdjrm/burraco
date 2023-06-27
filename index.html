@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+  <h2>Punti burraco</h2>
+  <head>
+    <title>Calcolatrice</title>
+    <style>
+      .calculator button {
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+        font-size: 16px;
+      }
+      .centered-cell {
+        text-align: center;
+        font-weight: bold;
+      }
+      .title {
+        background: blue;
+        font-weight: bold;
+        color: white;
+      }
+      .nomePunto {
+        font-weight: bold;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <table id="tabella">
+      <tr>
+        <td colspan="5" class="title"><span>Conteggio carte</span></td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Figure (3-7) +5</td>
+        <td>
+          <input
+            type="text"
+            id="figure1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="figure2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="figure3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="figure4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Punti (8-Re) +10</td>
+        <td>
+          <input
+            type="text"
+            id="punti1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="punti2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="punti3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="punti4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Assi +15</td>
+        <td>
+          <input
+            type="text"
+            id="assi1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="assi2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="assi3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="assi4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Pinelle +20</td>
+        <td>
+          <input
+            type="text"
+            id="pinelle1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pinelle2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pinelle3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pinelle4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Jolly +30</td>
+        <td>
+          <input
+            type="text"
+            id="jolly1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="jolly2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="jolly3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="jolly4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5" class="title"><span>Burrachi</span></td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Sporco +100</td>
+        <td>
+          <input
+            type="text"
+            id="sporco1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="sporco2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="sporco3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="sporco4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Semi pulito +150</td>
+        <td>
+          <input
+            type="text"
+            id="semipulito1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="semipulito2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="semipulito3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="semipulito4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Pulito +200</td>
+        <td>
+          <input
+            type="text"
+            id="pulito1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pulito2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pulito3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pulito4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Super +250</td>
+        <td>
+          <input
+            type="text"
+            id="super1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="super2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="super3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="super4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Reale +300</td>
+        <td>
+          <input
+            type="text"
+            id="reale1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="reale2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="reale3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="reale4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Scala completa +400</td>
+        <td>
+          <input
+            type="text"
+            id="scala1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="scala2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="scala3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="scala4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5" class="title"><span>Bonus/malus</span></td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Punti in mano</td>
+        <td>
+          <input
+            type="text"
+            id="resto1"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="resto2"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="resto3"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+        <td>
+          <input
+            type="text"
+            id="resto4"
+            maxlength="4"
+            size="4"
+            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Senza pozzetto -100</td>
+        <td class="centered-cell">
+          <input type="checkbox" id="pozzetto1" onchange="update()" />
+        </td>
+        <td class="centered-cell">
+          <input type="checkbox" id="pozzetto2" onchange="update()" />
+        </td>
+        <td class="centered-cell">
+          <input type="checkbox" id="pozzetto3" onchange="update()" />
+        </td>
+        <td class="centered-cell">
+          <input type="checkbox" id="pozzetto4" onchange="update()" />
+        </td>
+      </tr>
+      <tr>
+        <td class="nomePunto">Chiusura +100</td>
+        <td class="centered-cell">
+          <input
+            type="radio"
+            name="chiusura"
+            id="chiusura1"
+            onchange="update()"
+          />
+        </td>
+        <td class="centered-cell">
+          <input
+            type="radio"
+            name="chiusura"
+            id="chiusura2"
+            onchange="update()"
+          />
+        </td>
+        <td class="centered-cell">
+          <input
+            type="radio"
+            name="chiusura"
+            id="chiusura3"
+            onchange="update()"
+          />
+        </td>
+        <td class="centered-cell">
+          <input
+            type="radio"
+            name="chiusura"
+            id="chiusura4"
+            onchange="update()"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          <span><br /></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="centered-cell">Totale</td>
+        <td>
+          <input type="text" id="totale1" maxlength="4" size="4" readonly />
+        </td>
+        <td>
+          <input type="text" id="totale2" maxlength="4" size="4" readonly />
+        </td>
+        <td>
+          <input type="text" id="totale3" maxlength="4" size="4" readonly />
+        </td>
+        <td>
+          <input type="text" id="totale4" maxlength="4" size="4" readonly />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<script>
+  function update() {
+    var values = [];
+    var totals = [];
+
+    for (var i = 1; i <= 4; i++) {
+      values[i] = {
+        figure: document.getElementById('figure' + i).value || 0,
+        punti: document.getElementById('punti' + i).value || 0,
+        assi: document.getElementById('assi' + i).value || 0,
+        pinelle: document.getElementById('pinelle' + i).value || 0,
+        jolly: document.getElementById('jolly' + i).value || 0,
+        sporco: document.getElementById('sporco' + i).value || 0,
+        semipulito: document.getElementById('semipulito' + i).value || 0,
+        pulito: document.getElementById('pulito' + i).value || 0,
+        super: document.getElementById('super' + i).value || 0,
+        reale: document.getElementById('reale' + i).value || 0,
+        scala: document.getElementById('scala' + i).value || 0,
+        resto: document.getElementById('resto' + i).value || 0,
+        pozzetto: document.getElementById('pozzetto' + i).checked || 0,
+        chiusura: document.getElementById('chiusura' + i).checked || 0,
+      };
+
+      totals[i] =
+        values[i].figure * 5 +
+        values[i].punti * 10 +
+        values[i].assi * 15 +
+        values[i].pinelle * 20 +
+        values[i].jolly * 30 +
+        values[i].sporco * 100 +
+        values[i].semipulito * 150 +
+        values[i].pulito * 200 +
+        values[i].super * 250 +
+        values[i].reale * 300 +
+        values[i].scala * 400 -
+        values[i].resto +
+        values[i].pozzetto * -100 +
+        values[i].chiusura * 100;
+
+      document.getElementById('totale' + i).value = totals[i];
+    }
+  }
+</script>
