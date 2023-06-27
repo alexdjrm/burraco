@@ -7,6 +7,10 @@
       body {
         font-size: 20px;
       }
+      button {
+        height:50px;
+        font-size: 18px;
+      }
       table {
         width: 100%;
       }
@@ -50,13 +54,10 @@
         <td class="nomePunto">
           <button onclick="location.reload()">Azzera punteggi</button>
         </td>
-        <td class="centered-cell">Squadra 1</td>
-        <td class="centered-cell">Squadra 2</td>
-        <td class="centered-cell">Squadra 3</td>
-        <td class="centered-cell">Squadra 4</td>
+        <td class="centered-cell">Squadra</td>
       </tr>
       <tr>
-        <td colspan="5" class="title"><span>Conteggio carte</span></td>
+        <td colspan="2" class="title"><span>Conteggio carte</span></td>
       </tr>
       <tr>
         <td class="nomePunto">Figure (3-7) +5</td>
@@ -64,41 +65,13 @@
           <input
             type="text"
             inputmode="numeric"
-            id="figure1"
+            id="figure"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="figure2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="figure3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="figure4"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
+
         </td>
       </tr>
       <tr>
@@ -107,42 +80,13 @@
           <input
             type="text"
             inputmode="numeric"
-            id="punti1"
+            id="punti"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="punti2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="punti3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="punti4"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
+
       </tr>
       <tr>
         <td class="nomePunto">Assi +15</td>
@@ -150,41 +94,13 @@
           <input
             type="text"
             inputmode="numeric"
-            id="assi1"
+            id="assi"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="assi2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="assi3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="assi4"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
+
         </td>
       </tr>
       <tr>
@@ -193,37 +109,7 @@
           <input
             type="text"
             inputmode="numeric"
-            id="pinelle1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="pinelle2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="pinelle3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="pinelle4"
+            id="pinelle"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -236,45 +122,16 @@
           <input
             type="text"
             inputmode="numeric"
-            id="jolly1"
+            id="jolly"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="jolly2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="jolly3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="jolly4"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
+
       </tr>
       <tr>
-        <td colspan="5" class="title"><span>Burrachi</span></td>
+        <td colspan="2" class="title"><span>Burrachi</span></td>
       </tr>
       <tr>
         <td class="nomePunto">Sporco +100</td>
@@ -282,37 +139,7 @@
           <input
             type="text"
             inputmode="numeric"
-            id="sporco1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="sporco2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="sporco3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="sporco4"
+            id="sporco"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -325,37 +152,7 @@
           <input
             type="text"
             inputmode="numeric"
-            id="semipulito1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="semipulito2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="semipulito3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="semipulito4"
+            id="semipulito"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -368,37 +165,7 @@
           <input
             type="text"
             inputmode="numeric"
-            id="pulito1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="pulito2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="pulito3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="pulito4"
+            id="pulito"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -406,42 +173,12 @@
         </td>
       </tr>
       <tr>
-        <td class="nomePunto">Super +250</td>
+        <td class="nomePunto">superb +250</td>
         <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
-            id="super1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="super2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="super3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="super4"
+            id="superb"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -454,37 +191,7 @@
           <input
             type="text"
             inputmode="numeric"
-            id="reale1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="reale2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="reale3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="reale4"
+            id="reale"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -497,37 +204,7 @@
           <input
             type="text"
             inputmode="numeric"
-            id="scala1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="scala2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="scala3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="scala4"
+            id="scala"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -535,45 +212,15 @@
         </td>
       </tr>
       <tr>
-        <td colspan="5" class="title"><span>Bonus/malus</span></td>
+        <td colspan="2" class="title"><span>Bonus/malus</span></td>
       </tr>
       <tr>
-        <td class="nomePunto">Punti in mano</td>
+        <td class="nomePunto">Punti in mano (da sottrarre)</td>
         <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
-            id="resto1"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="resto2"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="resto3"
-            maxlength="4"
-            size="4"
-            oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="resto4"
+            id="resto"
             maxlength="4"
             size="4"
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
@@ -583,49 +230,15 @@
       <tr>
         <td class="nomePunto">Senza pozzetto -100</td>
         <td class="centered-cell">
-          <input type="checkbox" id="pozzetto1" onchange="update()" />
-        </td>
-        <td class="centered-cell">
-          <input type="checkbox" id="pozzetto2" onchange="update()" />
-        </td>
-        <td class="centered-cell">
-          <input type="checkbox" id="pozzetto3" onchange="update()" />
-        </td>
-        <td class="centered-cell">
-          <input type="checkbox" id="pozzetto4" onchange="update()" />
+          <input type="checkbox" id="pozzetto" onchange="update()" />
         </td>
       </tr>
       <tr>
         <td class="nomePunto">Chiusura +100</td>
         <td class="centered-cell">
           <input
-            type="radio"
-            name="chiusura"
-            id="chiusura1"
-            onchange="update()"
-          />
-        </td>
-        <td class="centered-cell">
-          <input
-            type="radio"
-            name="chiusura"
-            id="chiusura2"
-            onchange="update()"
-          />
-        </td>
-        <td class="centered-cell">
-          <input
-            type="radio"
-            name="chiusura"
-            id="chiusura3"
-            onchange="update()"
-          />
-        </td>
-        <td class="centered-cell">
-          <input
-            type="radio"
-            name="chiusura"
-            id="chiusura4"
+            type="checkbox"
+            id="chiusura"
             onchange="update()"
           />
         </td>
@@ -636,42 +249,12 @@
         </td>
       </tr>
       <tr>
-        <td class="centered-cell">Totale</td>
+        <td class="nomePunto">Totale</td>
         <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
-            id="totale1"
-            maxlength="4"
-            size="4"
-            readonly
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="totale2"
-            maxlength="4"
-            size="4"
-            readonly
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="totale3"
-            maxlength="4"
-            size="4"
-            readonly
-          />
-        </td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="totale4"
+            id="totale"
             maxlength="4"
             size="4"
             readonly
@@ -684,44 +267,24 @@
 
 <script>
   function update() {
-    var values = [];
-    var totals = [];
 
-    for (var i = 1; i <= 4; i++) {
-      values[i] = {
-        figure: document.getElementById('figure' + i).value || 0,
-        punti: document.getElementById('punti' + i).value || 0,
-        assi: document.getElementById('assi' + i).value || 0,
-        pinelle: document.getElementById('pinelle' + i).value || 0,
-        jolly: document.getElementById('jolly' + i).value || 0,
-        sporco: document.getElementById('sporco' + i).value || 0,
-        semipulito: document.getElementById('semipulito' + i).value || 0,
-        pulito: document.getElementById('pulito' + i).value || 0,
-        super: document.getElementById('super' + i).value || 0,
-        reale: document.getElementById('reale' + i).value || 0,
-        scala: document.getElementById('scala' + i).value || 0,
-        resto: document.getElementById('resto' + i).value || 0,
-        pozzetto: document.getElementById('pozzetto' + i).checked || 0,
-        chiusura: document.getElementById('chiusura' + i).checked || 0,
-      };
+    var figure = document.getElementById('figure').value || 0; 
+    var punti = document.getElementById('punti').value || 0;
+    var assi = document.getElementById('assi').value || 0;
+    var pinelle = document.getElementById('pinelle').value || 0;
+    var jolly = document.getElementById('jolly').value || 0;
+    var sporco = document.getElementById('sporco').value || 0;
+    var semipulito = document.getElementById('semipulito').value || 0;
+    var pulito = document.getElementById('pulito').value || 0;
+    var superb = document.getElementById('superb').value || 0;
+    var reale = document.getElementById('reale').value || 0;
+    var scala = document.getElementById('scala').value || 0;
+    var resto = document.getElementById('resto').value || 0;
+    var pozzetto = document.getElementById('pozzetto').checked ? -100 : 0;
+    var chiusura = document.getElementById('chiusura').checked ? 100 : 0;
 
-      totals[i] =
-        values[i].figure * 5 +
-        values[i].punti * 10 +
-        values[i].assi * 15 +
-        values[i].pinelle * 20 +
-        values[i].jolly * 30 +
-        values[i].sporco * 100 +
-        values[i].semipulito * 150 +
-        values[i].pulito * 200 +
-        values[i].super * 250 +
-        values[i].reale * 300 +
-        values[i].scala * 400 -
-        values[i].resto +
-        values[i].pozzetto * -100 +
-        values[i].chiusura * 100;
+    var total = figure * 5 + punti * 10 + assi * 15 + pinelle * 20 + jolly * 30 + sporco * 100 + semipulito * 150 + pulito * 200 + superb * 250 + reale * 300 + scala * 400 - resto + pozzetto + chiusura;
 
-      document.getElementById('totale' + i).value = totals[i];
-    }
+    document.getElementById('totale').value = total;
   }
 </script>
