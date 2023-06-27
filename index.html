@@ -5,11 +5,11 @@
     <title>Punti burraco</title>
     <style>
       body {
-        font-size: 30px;
+        font-size: 45px;
       }
       button {
-        height:50px;
-        font-size: 30px;
+        height:60px;
+        font-size: 45px;
       }
       table {
         width: 100%;
@@ -30,6 +30,9 @@
       .cellaPunti {
         text-align: center;
       }
+      .total{
+        border:none;
+      }
 
       /* Imposta larghezza al 100% per la tabella e le celle */
       #tabella {
@@ -44,7 +47,7 @@
       #tabella input[type='text'] {
         width: 50%;
         height: 40px;
-        font-size:30px;
+        font-size:45px;
       }
     </style>
   </head>
@@ -55,7 +58,16 @@
         <td class="nomePunto">
           <button onclick="location.reload()">Azzera</button>
         </td>
-        <td class="centered-cell">Squadra</td>
+        <td class="centered-cell">          
+          <input
+          type="text"
+          inputmode="numeric"
+          id="totale"
+          maxlength="4"
+          size="4"
+          readonly
+          class="total"
+        /></td>
       </tr>
       <tr>
         <td colspan="2" class="title"><span>Conteggio carte</span></td>
@@ -247,19 +259,6 @@
       <tr>
         <td colspan="5">
           <span><br /></span>
-        </td>
-      </tr>
-      <tr>
-        <td class="nomePunto">Totale</td>
-        <td class="cellaPunti">
-          <input
-            type="text"
-            inputmode="numeric"
-            id="totale"
-            maxlength="4"
-            size="4"
-            readonly
-          />
         </td>
       </tr>
     </table>
