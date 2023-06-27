@@ -2,7 +2,7 @@
 <html>
   <h2>Punti burraco</h2>
   <head>
-    <title>Calcolatrice</title>
+    <title>Punti burraco</title>
     <style>
       body {
         font-size: 20px;
@@ -23,6 +23,10 @@
         font-weight: bold;
         text-align: right;
       }
+      .cellaPunti {
+        text-align: center;
+      }
+
       /* Imposta larghezza al 100% per la tabella e le celle */
       #tabella {
         width: 100%;
@@ -30,11 +34,11 @@
 
       #tabella td {
         width: 20%; /* Equamente diviso in 5 colonne */
+        padding: 15px;
       }
-
       /* Imposta larghezza al 100% per gli input */
       #tabella input[type='text'] {
-        width: 100%;
+        width: 50%;
         height: 30px;
       }
     </style>
@@ -54,7 +58,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Figure (3-7) +5</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -64,7 +68,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -74,7 +78,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -84,7 +88,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -97,7 +101,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Punti (8-Re) +10</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -107,7 +111,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -117,7 +121,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -127,7 +131,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -140,7 +144,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Assi +15</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -150,7 +154,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -160,7 +164,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -170,7 +174,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -183,7 +187,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Pinelle +20</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -193,7 +197,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -203,7 +207,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -213,7 +217,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -226,7 +230,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Jolly +30</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -236,7 +240,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -246,7 +250,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -256,7 +260,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -272,7 +276,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Sporco +100</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -282,7 +286,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -292,7 +296,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -302,7 +306,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -315,7 +319,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Semi pulito +150</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -325,7 +329,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -335,7 +339,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -345,7 +349,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -358,7 +362,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Pulito +200</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -368,7 +372,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -378,7 +382,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -388,7 +392,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -401,7 +405,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Super +250</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -411,7 +415,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -421,7 +425,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -431,7 +435,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -444,7 +448,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Reale +300</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -454,7 +458,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -464,7 +468,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -474,7 +478,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -487,7 +491,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Scala completa +400</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -497,7 +501,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -507,7 +511,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -517,7 +521,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -533,7 +537,7 @@
       </tr>
       <tr>
         <td class="nomePunto">Punti in mano</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -543,7 +547,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -553,7 +557,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -563,7 +567,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, ''); update()"
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -631,7 +635,7 @@
       </tr>
       <tr>
         <td class="centered-cell">Totale</td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -641,7 +645,7 @@
             readonly
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -651,7 +655,7 @@
             readonly
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
@@ -661,7 +665,7 @@
             readonly
           />
         </td>
-        <td>
+        <td class="cellaPunti">
           <input
             type="text"
             inputmode="numeric"
